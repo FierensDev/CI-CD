@@ -1,0 +1,13 @@
+name: exo2
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/getthecode@main
+      - uses: ./.github/workflows/setupenvironment@main
+      - uses: ./.github/workflows/runbuild@main
+
