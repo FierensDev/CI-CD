@@ -13,7 +13,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: |
-          if [ ! -d dist ]; then
+          if [ ! -d src/dist ]; then
             echo "::error::Le dossier dist/ n'existe pas"
             exit 1
           fi
@@ -24,4 +24,3 @@ jobs:
           path: dist/
       - run: |
           echo "## Build" >> "$GITHUB_STEP_SUMMARY"
-          
